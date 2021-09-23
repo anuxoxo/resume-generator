@@ -9,7 +9,7 @@ Ritam Hota 49
 What are we doing?
 1. Navbar
 2. Intro - Name, Description, img, email, location, contact
-3. Work Experience - title, start date, end date, designation
+3. Work Experience - title/position, workforce/company, start date, end date
 4. Education - Institution name, degree, start date, end date
 5. Skills - skills
 6. Interests - interests
