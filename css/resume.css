@@ -4,9 +4,31 @@
   --light-black: #1f2022;
 }
 
+@media print {
+  #download {
+    display: none;
+  }
+}
+
 /* Utility classes */
-.red {
-  color: red;
+.Yellow {
+  color: #ffe194;
+}
+.Blue {
+  color: #b1fffd;
+}
+.Green {
+  color: #80ed99;
+}
+
+.bgYellow {
+  background-color: #ffb319;
+}
+.bgBlue {
+  background-color: #38a3a5;
+}
+.bgGreen {
+  background-color: #57cc99;
 }
 
 body {
@@ -87,7 +109,6 @@ main {
 .interestItem {
   padding: 2% 5%;
   width: fit-content;
-  background: rgb(233, 75, 75);
   color: white;
   border-radius: 25px;
   margin: 4px 0;
