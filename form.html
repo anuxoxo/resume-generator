@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
 
     <title>Resume Generator | Input Form</title>
@@ -27,18 +28,19 @@
         <!-- Work Experience Section -->
         <h1>Work Experience</h1>
         <form action="" class="work__exp">
-            <input type="text" class="text__inp" placeholder="Title / Position">
-            <input type="text" class="text__inp" placeholder="Workforce / Company">
+            <input id="position" type="text" class="text__inp" placeholder="Title / Position">
+            <input id="company" type="text" class="text__inp" placeholder="Workforce / Company">
 
             <label class="date__txt" for="startDate">Start Date</label>
-            <input type="date" name="startDate" id="startDate">
+            <input id="startDate" type="date">
 
             <label class="date__txt" for="endDate">End Date</label>
-            <input type="date" name="endDate" id="endDate">
+            <input id="endDate" type="date">
 
-            <!-- <button>+ Add More</button> -->
+            <input type="button" id="submitBtn" value="Submit" onclick="generateResume()">
         </form>
     </main>
+    <script src="js/index.js"></script>
 
 </body>
 
