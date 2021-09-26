@@ -1,8 +1,8 @@
-var printWindow, fileTag, src;
-fileTag = document.getElementById("file");
+var printWindow, fileTag, profileImgSrc = "images/user.png";
 
+fileTag = document.getElementById("file");
 fileTag.addEventListener("change", function () {
-    changeImage(this);
+    readImage(this);
 });
 
 function generateResume() {
@@ -23,7 +23,7 @@ function generateResume() {
         skillStr += `<p class="skillsItem bg${color}">${skill[i]}</p>`;
     }
 
-    printWindow = window.open('', '', 'height=400,width=800');
+    printWindow = window.open('');
     printWindow.document.write(`
    <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +44,7 @@ function generateResume() {
     <section id="intro">
         <div class="intro__flex">
             <div class="profile">
-                <img src="${src}" alt="profile Img" class="profileImg">
+                <img src="${profileImgSrc}" alt="profile Img" class="profileImg">
             </div>
             <div class="intro-content">
                 <h2 class="name ">Name</h2>
@@ -125,23 +125,22 @@ function generateResume() {
 </body>
 
 </html>`);
+
+    printWindow.document.close();
 }
 
 function print() {
-    printWindow.document.close();
     printWindow.print();
 }
 
-function changeImage(input) {
+function readImage(input) {
     var reader;
 
     if (input.files && input.files[0]) {
         reader = new FileReader();
 
         reader.onload = function (e) {
-            // preview.setAttribute('src', e.target.result);
-            src = e.target.result;
-            console.log('source', src);
+            profileImgSrc = e.target.result;
         }
 
         reader.readAsDataURL(input.files[0]);
