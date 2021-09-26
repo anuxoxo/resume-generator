@@ -1,7 +1,12 @@
-var printWindow;
+var printWindow, fileTag, src;
+fileTag = document.getElementById("file");
+
+fileTag.addEventListener("change", function () {
+    changeImage(this);
+});
+
 function generateResume() {
 
-    // let monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     let name = "Guest";
     let skill = ['HTML', 'CSS', 'JAVA', 'C', 'C++'];
     let skillStr = '';
@@ -17,7 +22,6 @@ function generateResume() {
 
         skillStr += `<p class="skillsItem bg${color}">${skill[i]}</p>`;
     }
-
 
     printWindow = window.open('', '', 'height=400,width=800');
     printWindow.document.write(`
@@ -40,7 +44,7 @@ function generateResume() {
     <section id="intro">
         <div class="intro__flex">
             <div class="profile">
-                <img src=" images/user.png" alt="profile Img" class="profileImg">
+                <img src="${src}" alt="profile Img" class="profileImg">
             </div>
             <div class="intro-content">
                 <h2 class="name ">Name</h2>
@@ -128,42 +132,18 @@ function print() {
     printWindow.print();
 }
 
+function changeImage(input) {
+    var reader;
 
-// $("#btnPrint").click(function () {
-//     var divContents = $("#dvContainer").html();
-//     let name = document.getElementById("name").value;
-//     console.log(name);
-//     let univ = $("univ").value;
-//     console.log(univ);
+    if (input.files && input.files[0]) {
+        reader = new FileReader();
 
-//     var fileTag = document.getElementById("file"),
-//         preview = document.getElementById("preview");
+        reader.onload = function (e) {
+            // preview.setAttribute('src', e.target.result);
+            src = e.target.result;
+            console.log('source', src);
+        }
 
-//     fileTag.addEventListener("change", function () {
-//         changeImage(this);
-//     });
-
-//     function changeImage(input) {
-//         var reader;
-
-//         if (input.files && input.files[0]) {
-//             reader = new FileReader();
-
-//             reader.onload = function (e) {
-//                 preview.setAttribute('src', e.target.result);
-//             }
-
-//             reader.readAsDataURL(input.files[0]);
-//         }
-//     }
-
-//     var printWindow = window.open('', '', 'height=400,width=800');
-//     printWindow.document.write('<html><head><title>DIV Contents</title>');
-//     printWindow.document.write('</head><body>');
-//     printWindow.document.write(divContents);
-//     printWindow.document.write(name);
-//     printWindow.document.write(univ);
-//     printWindow.document.write('</body></html>');
-//     printWindow.document.close();
-//     printWindow.print();
-// });
+        reader.readAsDataURL(input.files[0]);
+    }
+}
