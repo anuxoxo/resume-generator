@@ -1,52 +1,23 @@
-// $("#btnPrint").click(function () {
-//     var divContents = $("#dvContainer").html();
-//     let name = document.getElementById("name").value;
-//     console.log(name);
-//     let univ = $("univ").value;
-//     console.log(univ);
-
-//     var fileTag = document.getElementById("file"),
-//         preview = document.getElementById("preview");
-
-//     fileTag.addEventListener("change", function () {
-//         changeImage(this);
-//     });
-
-//     function changeImage(input) {
-//         var reader;
-
-//         if (input.files && input.files[0]) {
-//             reader = new FileReader();
-
-//             reader.onload = function (e) {
-//                 preview.setAttribute('src', e.target.result);
-//             }
-
-//             reader.readAsDataURL(input.files[0]);
-//         }
-//     }
-
-//     var printWindow = window.open('', '', 'height=400,width=800');
-//     printWindow.document.write('<html><head><title>DIV Contents</title>');
-//     printWindow.document.write('</head><body>');
-//     printWindow.document.write(divContents);
-//     printWindow.document.write(name);
-//     printWindow.document.write(univ);
-//     printWindow.document.write('</body></html>');
-//     printWindow.document.close();
-//     printWindow.print();
-// });
 var printWindow;
 function generateResume() {
 
     // let monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    let name = "Anu";
+    let name = "Guest";
+    let skill = ['HTML', 'CSS', 'JAVA', 'C', 'C++'];
+    let skillStr = '';
 
     let position = document.getElementById("position").value;
     let company = document.getElementById("company").value;
     let startDate = document.getElementById("startDate").value;
     let endDate = document.getElementById("endDate").value;
     let color = document.getElementById("color").value;
+
+    // Logic to extract skills from text area to separate fields
+    for (let i = 0; i < skill.length; i++) {
+
+        skillStr += `<p class="skillsItem bg${color}">${skill[i]}</p>`;
+    }
+
 
     printWindow = window.open('', '', 'height=400,width=800');
     printWindow.document.write(`
@@ -78,7 +49,7 @@ function generateResume() {
                     facilis
                     ea quos suscipit iusto, atque praesentium mollitia debitis assumenda ullam, dignissimos aut
                     perspiciatis
-                    soluta temporibus.</p>
+                    soluta skilloribus.</p>
             </div>
         </div>
         <div class="intro__contact">
@@ -129,13 +100,7 @@ function generateResume() {
             <section id="skills">
                 <h1 class="${color}">Skills</h1>
                 <div class="skillSet">
-                    <p class="skillsItem bg${color}">Skills</p>
-                    <p class="skillsItem bg${color}">Skills</p>
-                    <p class="skillsItem bg${color}">Skills</p>
-                    <p class="skillsItem bg${color}">Skills</p>
-                    <p class="skillsItem bg${color}">Skills</p>
-                    <p class="skillsItem bg${color}">Skills</p>
-                    <p class="skillsItem bg${color}">Skills</p>
+                    ${skillStr}
 
                 </div>
             </section>
@@ -163,3 +128,42 @@ function print() {
     printWindow.print();
 }
 
+
+// $("#btnPrint").click(function () {
+//     var divContents = $("#dvContainer").html();
+//     let name = document.getElementById("name").value;
+//     console.log(name);
+//     let univ = $("univ").value;
+//     console.log(univ);
+
+//     var fileTag = document.getElementById("file"),
+//         preview = document.getElementById("preview");
+
+//     fileTag.addEventListener("change", function () {
+//         changeImage(this);
+//     });
+
+//     function changeImage(input) {
+//         var reader;
+
+//         if (input.files && input.files[0]) {
+//             reader = new FileReader();
+
+//             reader.onload = function (e) {
+//                 preview.setAttribute('src', e.target.result);
+//             }
+
+//             reader.readAsDataURL(input.files[0]);
+//         }
+//     }
+
+//     var printWindow = window.open('', '', 'height=400,width=800');
+//     printWindow.document.write('<html><head><title>DIV Contents</title>');
+//     printWindow.document.write('</head><body>');
+//     printWindow.document.write(divContents);
+//     printWindow.document.write(name);
+//     printWindow.document.write(univ);
+//     printWindow.document.write('</body></html>');
+//     printWindow.document.close();
+//     printWindow.print();
+// });
