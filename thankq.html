@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you page</title>
+
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style inputs */
+        input[type=text],
+        select,
+        textarea {
+            width: 50%;
+            padding: 12px;
+            border: 1px solid rgb(219, 0, 0);
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: horizontal;
+        }
+
+        input[type=submit] {
+            background-color: #e40d0d;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #f86262;
+        }
+
+        /* Style the container/contact section */
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .column,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<style>
+    
+
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* Add a hover effect if you want */
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    /* Set a specific color for each brand */
+
+    /* Facebook */
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+
+    /* Twitter */
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+</style>
+
+
+<body >
+    <center>
+        <img style="width: 325px;" src="1.png" alt="Sucess!" width="200px" height="200px">
+        <h1 style="color: #dd0000 ;">Thank You!</h1>
+        <h3 style="color: #dd0000;">Your résumé has been sucessfully generated. </h3>
+        <h4 style="color: #dd0000;"><a href="./index.html">Go back</a></h4>
+        <br><br><br><br><br>
+        <h3 style="color: #dd0000 ;">If you liked our website, don't forget to share it among friends!
+        </h3>
+        <!-- Add icon library -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Add font awesome icons -->
+        <a href="#" class="fa fa-facebook"></a>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="#" class="fa fa-twitter"></a>
+        <p style="color: #dd0000;"> Facebook &nbsp; &nbsp; Twitter</p>
+        <br><br><br><br>
+        <div class="container">
+            <div style="text-align:center">
+
+                <h2>Contact Us</h2>
+            </div>
+
+            <form action="contact_response.html">
+                <label for="fname">First Name</label>
+                <br>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <br>
+                <label for="lname">Last Name</label>
+                <br>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <br>
+                <label for="subject">Subject</label>
+                <br>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+       
+        <h3 style="color: blue;">Find us:</h3>
+        <address>
+            <a href="hotaritam@gmail.com">webdevteam.com</a><br>
+            <a href="tel:+917736880504">Ph: 7736880504</a>
+        </address>
+
+
+
+    </center>
+</body>
+
+</html>
