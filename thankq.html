@@ -6,16 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank you page</title>
-
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        body {
-            background-color: black;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
 
         /* Style inputs */
         input[type=text],
@@ -69,8 +61,6 @@
     </style>
 </head>
 <style>
-    
-
     .fa {
         padding: 20px;
         font-size: 30px;
@@ -100,9 +90,25 @@
 </style>
 
 
-<body >
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul class="navbar">
+            <a href="index.html">
+                <img src="images/logo.png" alt="logo-pdf-generator" class="nav__logo">
+            </a>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="about.html"> About us </a></li>
+            <li><a href="contact.html"> Contact us </a></li>
+            <button class="generate-btn generate-btn-outline">
+                <a href="form.html" class="generateBtn__text">
+                    Generate Now
+                </a>
+            </button>
+        </ul>
+    </nav>
     <center>
-        <img style="width: 325px;" src="1.png" alt="Sucess!" width="200px" height="200px">
+        <img style="width: 325px;" src="/images/1.png" alt="Sucess!" width="200px" height="200px">
         <h1 style="color: #dd0000 ;">Thank You!</h1>
         <h3 style="color: #dd0000;">Your résumé has been sucessfully generated. </h3>
         <h4 style="color: #dd0000;"><a href="./index.html">Go back</a></h4>
@@ -141,7 +147,7 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
-       
+
         <h3 style="color: blue;">Find us:</h3>
         <address>
             <a href="hotaritam@gmail.com">webdevteam.com</a><br>
