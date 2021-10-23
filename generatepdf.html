@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css"></style>
+        <script type="text/javascript"></script>
+        <title>Generate Pdf</title>
+    <style>
+        .para-color
+            {
+                color:red;
+                font-family: sans-serif;
+                text-transform: capitalize;
+            }
+
+          .text-area {
+            background-color: #0d1117;
+            /*#1f2022;*/
+            outline-width:10px;
+            outline:groove;
+            padding:10px;
+            display:grid;
+            text-align:center;
+           
+        }
+        .input-area {
+    
+    background-color: #1f2022;
+    color:white;
+    
+}
+#generate-button {
+    background-color: gray;
+    padding:50px 50px;
+    margin: 50px 0px 0px 0px;
+    font-family:sans-serif;
+    font-weight: bold;
+    outline: black groove 2px;
+}
+    </style>        
+    </head>
+
+
+    <body>
+        <!--The generate pdf section should have borders and the center must have generate pdf, when generate pdf is clicked action event is performed on all forms-->
+        <form id="generate_form" action="" class="text-area">
+            <p class="para-color">Generate Your Customized Resume Below</p>
+            <p> <input type="submit" value="Generate PDF" id="generate-button"></p>
+        </form>
+    </body>
+</html>

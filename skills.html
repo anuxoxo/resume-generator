@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script type="text/javascript">
+
+            function getSkills()
+            {
+                // var i = 0, j = 0;
+                // var skill_str = document.getElementById("user_skills_input").value;
+                // skill_str_len = skill_str.length();
+                // // alert("Skills are : " + skill_str);
+                // const skills = [];
+                // while (i < skill_str_len){
+                   
+                //     if (skill_str[i] == ',')
+                //     {
+                //         skills.append(skill_str.slice(j, i-1));
+                //         j = i+1;
+                //     }
+                //     i++;
+                // }
+                // alert(skills);
+            }
+
+            
+        </script>
+        <title>
+            Skills Section
+        </title>
+        <style type="text/css">
+            .text-area {
+                background-color: #0d1117;
+                /*#1f2022;*/
+                outline-width:10px;
+                outline:groove;
+                padding:10px;
+                display:flex;
+            }   
+            
+            .input-area {
+    
+                background-color: #1f2022;
+                color:white;
+            }
+    
+            .para-color
+            {
+                color:red;
+                font-family: sans-serif;
+                text-transform: capitalize;
+            }
+            </style>
+    </head>
+
+    <body >
+        <form action="post" id="skills_form" class="text-area">
+            <p class="para-color">enter the skills you have!</p>
+            <p><textarea name="Enter Skills"class="input-area" id="user_skills_input" cols="40" rows="10" required placeholder="Seperate Each skill with a comma ','"></textarea></p>
+        </form>
+       
+    </body>
+
+</html>
