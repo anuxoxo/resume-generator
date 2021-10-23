@@ -20,16 +20,24 @@
       <li><a href="index.html"> Home </a></li>
       <li><a href="about.html"> About us </a></li>
       <li><a href="contact.html"> Contact us </a></li>
+      <button class="generate-btn generate-btn-outline">
+        <a href="form.html" class="generateBtn__text">
+          Generate Now
+        </a>
+      </button>
     </ul>
   </nav>
 
-  <h1 style="color: white">How can we help?</h1>
-  <form action="contact_response.html">
-    <input name="name" type="text" class="feedback-input" placeholder="Name" required />
-    <input name="email" type="text" class="feedback-input" placeholder="Email" required />
-    <textarea name="text" class="feedback-input" placeholder="Description... " required></textarea>
-    <input type="submit" value="SUBMIT" />
-  </form>
+  <!-- Contact Form -->
+  <div class="contactForm">
+    <h1>How can we help?</h1>
+    <form>
+      <input name="name" type="text" class="feedback-input" placeholder="Name" required />
+      <input name="email" type="text" class="feedback-input" placeholder="Email" required />
+      <textarea name="text" class="feedback-input" placeholder="Description... " required></textarea>
+      <input type="submit" value="SUBMIT" />
+    </form>
+  </div>
 </body>
 
 <script src="js/index.js"></script>

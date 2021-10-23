@@ -24,29 +24,46 @@
         </ul>
     </nav>
     <main>
+        <!-- Introduction -->
+        <div id="intro">
+            <h1>Personal Details</h1>
+            <input id="name" type="text" placeholder="Name">
+            <input id="professionalTitle" type="text" placeholder="Professional Title">
+            <p class="label__txt">Upload a profile image</p>
+            <input type="file" name="file" id="file">
+            <textarea name="description" id="description" cols="50" rows="5" placeholder="Description"></textarea>
+            <input type="email" name="email" id="email" placeholder="Email ID">
+            <textarea name="location" id="location" cols="30" rows="2" placeholder="Location"></textarea>
+            <input type="tel" name="contactNo" id="contactNo" placeholder="Contact Number">
+
+        </div>
 
         <!-- Work Experience Section -->
         <h1>Work Experience</h1>
-        <form action="" class="work__exp">
+        <div action="" class="work__exp">
             <input id="position" type="text" class="text__inp" placeholder="Title / Position">
             <input id="company" type="text" class="text__inp" placeholder="Workforce / Company">
             <br>
             <label class="label__txt" for="workStartDate">Start Date</label>
-            <input id="workStartDate" type="month" pattern="\d{4}-\d{2}-\d{2}">
+            <input id="workStartDate" type="month">
 
             <label class="label__txt" for="workEndDate">End Date</label>
             <input id="workEndDate" type="month">
             <br>
 
-
             <!-- Skills  -->
+            <h1>Skills</h1>
             <div id="skills_form" class="text-area">
-                <p class="para-color">enter the skills you have!</p>
+                <p class="label__txt">Enter your skills</p>
                 <p><textarea name="Enter Skills" class="input-area" id="user_skills_input" cols="40" rows="10" required
                         placeholder="Seperate Each skill with a comma ','"></textarea></p>
+            </div>
 
-                <!-- Interests -->
-                <p class="para-color">enter your interests here! : </p>
+            <!-- Interests -->
+            <div id="interestSection">
+
+                <h1>Interests</h1>
+                <p class="label__txt">Enter your interests</p>
                 <p> <textarea name="Interests" id="user_interests_input" class="input-area" cols="40" rows="10" required
                         placeholder="Seperate Each skill with a comma ','"></textarea> </p>
             </div>
@@ -56,19 +73,13 @@
 
             <select name="color" id="color">
                 <option value="Yellow">Yellow</option>
-                <option value="Blue">Blue</option>
+                <option value="Blue" selected>Blue</option>
                 <option value="Green">Green</option>
             </select>
-            <br>
 
-            <!-- Profile Image Input -->
-            <input type="file" name="file" id="file">
-            <br>
+            <input type="button" id="submitBtn" class="generate-btn" value="Generate PDF" onclick="generateResume()">
 
-            <input type="button" id="submitBtn" value="Submit" onclick="generateResume()">
-            <br>
-
-        </form>
+        </div>
     </main>
     <script src="js/index.js"></script>
 
