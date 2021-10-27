@@ -4,6 +4,16 @@
   --dark-black: #0d1117;
   --light-black: #1f2022;
   --grey: #8b949e;
+  --light-red: rgb(248, 96, 96);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 body {
@@ -32,19 +42,18 @@ nav {
 
 .navbar li {
   list-style-type: none;
-  padding: 10px 20px;
+  padding: 30px 20px;
 }
 
 ul.navbar a {
   font-weight: 500;
-  text-decoration: none;
   color: white;
   font-size: 20px;
 }
 
 .nav__logo {
-  width: 48px;
-  height: 48px;
+  width: 78px;
+  height: 78px;
   padding: 20px 20px;
 }
 
@@ -57,7 +66,7 @@ ul.navbar a {
 
 .banner-div {
   width: 50%;
-  margin-right: 1%;
+  margin-right: 4%;
 }
 
 .img-container {
@@ -97,7 +106,7 @@ ul.navbar a {
   font-weight: 700;
 }
 
-/* FORM */
+/* INPUT FORM */
 main {
   padding: 1% 25%;
 }
@@ -136,31 +145,10 @@ select {
 .label__txt {
   font-size: 19px;
   font-weight: bold;
-  color: rgb(248, 96, 96);
+  color: var(--light-red);
 }
-/*
-.text-area {
-  background-color: #0d1117;
-  outline-width: 10px;
-  outline: groove;
-  padding: 10px;
-  display: flex;
-}
-
-.input-area {
-  background-color: #1f2022;
-  color: white;
-}
-
-.para-color {
-  color: red;
-  font-family: sans-serif;
-  text-transform: capitalize;
-}
-
 
 /* CONTACT */
-
 .contactForm form {
   max-width: 420px;
   margin: 20px auto;
@@ -220,4 +208,46 @@ select {
 
 .contactForm [type="submit"]:hover {
   background: #db0000;
+}
+
+footer {
+  width: 100%;
+  height: 60vh;
+  background: var(--light-black);
+  padding: 7% 15%;
+  color: white;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer li {
+  list-style-type: none;
+  padding: 2% 0;
+}
+
+footer a:hover {
+  color: var(--light-red);
+}
+
+footer div {
+  width: 33%;
+  margin: 3%;
+  border-right: 1px solid var(--light-red);
+}
+
+.copyright {
+  border-right: none;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer h3 {
+  color: var(--light-red);
 }
