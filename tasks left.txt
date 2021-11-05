@@ -1,0 +1,16 @@
+Tasks left to complete :
+
+1. About us
+
+2. Education Input - Add the code in github file and add css accordingly. I have already added other input fields' css so take a look at it and implement.
+
+3. Thank You - 
+    3.1. Change the design of thank you page accordingly to match up with the rest.
+    3.2. Connect the page with rest as im not sure if we can add it after pdf generation. Maybe, you can add it when user uses contact form.
+
+4. JS -  I've added all the javascript for my part, give it a read and try to implement it for your section inputs.
+
+5. Responsive design - im not sure if we have enough time to complete this.
+
+
+
