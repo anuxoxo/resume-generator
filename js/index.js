@@ -22,8 +22,23 @@ function monthName(date) {
 function generateResume() {
 
     let name = "Guest";
-    let skill = ['HTML', 'CSS', 'JAVA', 'C', 'C++'];
+    let skill = [];
     let skillStr = '';
+    let interestStr = '';
+    let interest = [];
+    let interestElement = document.getElementById("user_interests_input").value;
+    let skillElement = document.getElementById("user_skills_input").value;
+    skillElement = skillElement.split(" ")
+    interestElement = interestElement.split(" ");
+    for (let i = 0; i < skillElement.length; i++)
+    {
+        skill.push(skillElement[i]);
+    }
+
+    for (let i = 0; i < interestElement.length; i++)
+    {
+        interest.push(interestElement[i]);
+    }
 
     let position = document.getElementById("position").value;
     let company = document.getElementById("company").value;
@@ -38,6 +53,10 @@ function generateResume() {
     // Logic to extract skills from text area to separate fields
     for (let i = 0; i < skill.length; i++) {
         skillStr += `<p class="skillsItem bg${color}">${skill[i]}</p>`;
+    }
+
+    for (let i = 0; i < interest.length; i++) {
+        interestStr += `<p class="skillsItem bg${color}">${interest[i]}</p>`;
     }
 
     printWindow = window.open('');
@@ -129,9 +148,7 @@ function generateResume() {
                 <section id="interest">
                     <h1 class="${color}">Interests</h1>
                     <div class="interestSet">
-                        <p class="interestItem bg${color}">Skills</p>
-                        <p class="interestItem bg${color}">Skills</p>
-                        <p class="interestItem bg${color}">Skills</p>
+                        ${interestStr}
                     </div>
 
                 </section>
