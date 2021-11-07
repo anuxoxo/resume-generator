@@ -19,6 +19,8 @@ function monthName(date) {
     return arr;
 }
 
+
+
 function generateResume() {
 
     let name = "Guest";
@@ -39,15 +41,32 @@ function generateResume() {
     {
         interest.push(interestElement[i]);
     }
-
+    
+    // Work Experience 
     let position = document.getElementById("position").value;
     let company = document.getElementById("company").value;
     let workStartDate = document.getElementById("workStartDate").value;
     let workEndDate = document.getElementById("workEndDate").value;
     let color = document.getElementById("color").value;
-
     workStartDate = monthName(workStartDate);
     workEndDate = monthName(workEndDate);
+
+
+    // Education 
+
+    let degree = document.getElementById("degree").value;  
+    let instName = document.getElementById("institution").value; 
+    let edStartDate = document.getElementById("edStartDate").value;
+    let edEndDate = document.getElementById("edEndDate").value;
+    let GPA = document.getElementById("GPA").value; 
+    edStartDate = monthName(edStartDate);
+    edEndDate = monthName(edEndDate);
+
+    if (GPA > 10 || GPA < 0)
+{
+        alert("Re-Enter The GPA");
+        return false;
+}
 
 
     // Logic to extract skills from text area to separate fields
@@ -123,16 +142,16 @@ function generateResume() {
             <div class="left">
                 <section id="education">
                     <h1 class="${color}">Education</h1>
-                    <h3>Degree</h3>
-                    <h4>Institution name</h5>
-                        <p>Start date - End date</p>
-                        <p>Score</p>
+                    <h3>${degree}</h3>
+                    <h4>${instName}</h4>
+                        <p>${edStartDate} - ${edEndDate}</p>
+                        <p>${GPA}</p>
                 </section>
 
                 <section id="work">
                     <h1 class="${color}">Work Experience</h1>
                     <h3>${position}</h3>
-                    <h4>${company}</h5>
+                    <h4>${company}</h4>
                         <p>${workStartDate} - ${workEndDate}</p>
                 </section>
             </div>
