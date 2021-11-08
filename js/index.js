@@ -24,7 +24,7 @@ function monthName(date) {
 
 function generateResume() {
 
-    let name = document.getElementById("name").value;
+    let name = (document.getElementById("name").value) ? (document.getElementById("name").value) : "Guest";
     let skill = [];
     let skillStr = '';
     let interestStr = '';
@@ -184,7 +184,7 @@ function generateResume() {
 function print() {
     printWindow.print();
 
-    
+
 }
 
 
