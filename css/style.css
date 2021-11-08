@@ -31,6 +31,9 @@ h1 {
 
 /* NAVBAR */
 nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
   background-color: var(--light-black);
 }
 
@@ -250,4 +253,25 @@ footer p {
 
 footer h3 {
   color: var(--light-red);
+}
+
+/* About */
+.flexc {
+  display: flex;
+  margin: 0 50px;
+  background-color: rgb(10, 9, 9);
+}
+
+.flexc > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  color: rgb(116, 109, 109);
+  margin: 10px;
+  padding: 70px 40px;
+  width: 100px;
+  font-size: 20px;
 }
