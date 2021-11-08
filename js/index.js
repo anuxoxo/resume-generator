@@ -25,6 +25,11 @@ function monthName(date) {
 function generateResume() {
 
     let name = (document.getElementById("name").value) ? (document.getElementById("name").value) : "Guest";
+    let professionalTitle = (document.getElementById("professionalTitle").value) ? (document.getElementById("professionalTitle").value) : "Professional Title";
+    let description = (document.getElementById("description").value) ? (document.getElementById("description").value) : "Description";
+    let email = (document.getElementById("email").value) ? (document.getElementById("email").value) : "Email";
+    let location = (document.getElementById("location").value) ? (document.getElementById("location").value) : "Location";
+    let contactNo = (document.getElementById("contactNo").value) ? (document.getElementById("contactNo").value) : "Contact no";
     let skill = [];
     let skillStr = '';
     let interestStr = '';
@@ -102,12 +107,8 @@ function generateResume() {
                 </div>
                 <div class="intro-content">
                     <h2 class="name">${name}</h2>
-                    <h1 class="prof__title ${color}">Professional Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repudiandae saepe at, id corrupti
-                        facilis
-                        ea quos suscipit iusto, atque praesentium mollitia debitis assumenda ullam, dignissimos aut
-                        perspiciatis
-                        soluta skilloribus.</p>
+                    <h1 class="prof__title ${color}">${professionalTitle}</h1>
+                    <p>${description}</p>
                 </div>
             </div>
             <div class="intro__contact">
@@ -115,14 +116,14 @@ function generateResume() {
                     <i>
                         <img src="images/your-location.png" alt="" class="icon">
                     </i>
-                    Lorem ipsum dolor sit amet.
+                    ${location}
                 </p>
                 <p>
                     <a href="tel:787787777">
                         <i>
                             <img src="images/telephone.png" alt="" class="icon">
                         </i>
-                        7777778888
+                        ${contactNo}
                     </a>
                 </p>
                 <p>
@@ -130,7 +131,7 @@ function generateResume() {
                         <i>
                             <img src="images/gmail.png" alt="" class="icon">
                         </i>
-                        ab@12.com
+                        ${email}
                     </a>
                 </p>
 
