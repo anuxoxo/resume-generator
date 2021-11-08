@@ -1,18 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
+    <style>
+        .flexc {
+            display: flex;
+            margin: 0 50px;
+            background-color: rgb(10, 9, 9);
+        }
 
+        .flexc>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f1f1f1;
+            border-radius: 25px;
+            color: rgb(116, 109, 109);
+            margin: 10px;
+            padding: 70px 40px;
+            width: 100px;
+            font-size: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        body {
+            background-color: rgba(163, 10, 10, 0.829);
+        }
+
+        h1 {
+
+            font-size: 4em;
+            font-weight: bold;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/logo.png" type="image/png">
 </head>
 
 <body>
-
     <nav>
         <ul class="navbar">
             <a href="index.html">
@@ -28,6 +65,71 @@
             </button>
         </ul>
     </nav>
+    <h1 style="text-align:center">About Us</h1>
+
+    <div class="flexc">
+        <div style="flex-grow: 1">
+
+            <img src="images\girl-1.png" style="margin-bottom: 15px;">
+            <p><b>Varsha Pradeep</b></p>
+            <p>20BCA0027</p>
+            <br>
+            <p><b>Contributions </b></p>
+            <p class="center">Development<br>(HTML + CSS + JS) of</p>
+            <ul>
+                <li>Navigation bar,</li>
+                <li>Introductory Details Input Section</li>
+                <li>About us page</li>
+            </ul>
+
+        </div>
+        <div style="flex-grow: 1">
+            <img src="images\girl-2.png">
+            <p><b>Kumari Anushka</b></p>
+
+            <p>20BCA0048</p>
+            <br>
+            <p><b>Contributions</b></p>
+            <p class="center">Development<br> (HTML + CSS + JS) of</p>
+            <ul>
+                <li>Starting page</li>
+                <li>Work Experience section</li>
+                <li>Pdf Design</li>
+            </ul>
+        </div>
+        <div style="flex-grow: 1">
+
+            <img src="images\man-1.png">
+            <p><b>Rohan Raj</b></p>
+
+            <p>20BCA0044</p>
+            <br>
+
+            <p><b>Contributions</b></p>
+            <p class="center">Development<br> (HTML + CSS + JS) of</p>
+            <ul>
+                <li>Skills section</li>
+                <li>Interests section</li>
+                <li>Generate Pdf Section</li>
+            </ul>
+        </div>
+
+        <div style="flex-grow: 1">
+            <img src="images\man-2.png">
+            <p><b>Ritam Hota</b></p>
+
+            <p>20BCA0049</p>
+            <br>
+
+            <p><b>Contributions</b></p>
+            <p class="center">Development<br> (HTML + CSS + JS) of</p>
+            <ul>
+                <li>Education details section</li>
+                <li>Contact Us page</li>
+                <li>Thank You page</li>
+            </ul>
+        </div>
+    </div>
 
     <footer>
         <div class="quickLinks">
@@ -51,7 +153,6 @@
         </div>
 
     </footer>
-
 </body>
 
 </html>

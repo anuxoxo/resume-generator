@@ -6,8 +6,9 @@ fileTag.addEventListener("change", function () {
 });
 
 var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 function monthName(date) {
-    let arr = date.split('-');
+    let arr = date.split('-'); // 2020-01 -> ['Jan','2020'] -> Jan 2020
     arr[1] = parseInt(arr[1]);
     arr[1] = month[arr[1] - 1];
 
@@ -23,25 +24,25 @@ function monthName(date) {
 
 function generateResume() {
 
-    let name = "Guest";
+    let name = document.getElementById("name").value;
     let skill = [];
     let skillStr = '';
     let interestStr = '';
     let interest = [];
     let interestElement = document.getElementById("user_interests_input").value;
     let skillElement = document.getElementById("user_skills_input").value;
+
     skillElement = skillElement.split(" ")
     interestElement = interestElement.split(" ");
-    for (let i = 0; i < skillElement.length; i++)
-    {
+
+    for (let i = 0; i < skillElement.length; i++) {
         skill.push(skillElement[i]);
     }
 
-    for (let i = 0; i < interestElement.length; i++)
-    {
+    for (let i = 0; i < interestElement.length; i++) {
         interest.push(interestElement[i]);
     }
-    
+
     // Work Experience 
     let position = document.getElementById("position").value;
     let company = document.getElementById("company").value;
@@ -53,20 +54,18 @@ function generateResume() {
 
 
     // Education 
-
-    let degree = document.getElementById("degree").value;  
-    let instName = document.getElementById("institution").value; 
+    let degree = document.getElementById("degree").value;
+    let instName = document.getElementById("institution").value;
     let edStartDate = document.getElementById("edStartDate").value;
     let edEndDate = document.getElementById("edEndDate").value;
-    let GPA = document.getElementById("GPA").value; 
+    let GPA = document.getElementById("GPA").value;
     edStartDate = monthName(edStartDate);
     edEndDate = monthName(edEndDate);
 
-    if (GPA > 10 || GPA < 0)
-{
+    if (GPA > 10 || GPA < 0) {
         alert("Re-Enter The GPA");
         return false;
-}
+    }
 
 
     // Logic to extract skills from text area to separate fields
@@ -102,7 +101,7 @@ function generateResume() {
                     <img src="${profileImgSrc}" alt="profile Img" class="profileImg">
                 </div>
                 <div class="intro-content">
-                    <h2 class="name ">Name</h2>
+                    <h2 class="name">${name}</h2>
                     <h1 class="prof__title ${color}">Professional Title</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repudiandae saepe at, id corrupti
                         facilis
@@ -145,7 +144,7 @@ function generateResume() {
                     <h3>${degree}</h3>
                     <h4>${instName}</h4>
                         <p>${edStartDate} - ${edEndDate}</p>
-                        <p>${GPA}</p>
+                        <p>${GPA} CGPA</p>
                 </section>
 
                 <section id="work">
@@ -184,18 +183,20 @@ function generateResume() {
 
 function print() {
     printWindow.print();
+
+    
 }
+
 
 function readImage(input) {
     var reader;
 
     if (input.files && input.files[0]) {
-        reader = new FileReader();
+        reader = new FileReader(); // To read image
 
         reader.onload = function (e) {
             profileImgSrc = e.target.result;
         }
-
         reader.readAsDataURL(input.files[0]);
     }
 }
